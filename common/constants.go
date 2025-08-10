@@ -257,7 +257,7 @@ const (
 	ChannelTypeSunoAPI        = 36
 	ChannelTypeDify           = 37
 	ChannelTypeJina           = 38
-	ChannelCloudflare         = 39
+	ChannelTypeCloudflare     = 39
 	ChannelTypeSiliconFlow    = 40
 	ChannelTypeVertexAi       = 41
 	ChannelTypeMistral        = 42

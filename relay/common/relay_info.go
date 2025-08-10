@@ -117,7 +117,7 @@ var streamSupportedChannels = map[int]bool{
 	common.ChannelTypeAnthropic:  true,
 	common.ChannelTypeAws:        true,
 	common.ChannelTypeGemini:     true,
-	common.ChannelCloudflare:     true,
+	common.ChannelTypeCloudflare: true,
 	common.ChannelTypeAzure:      true,
 	common.ChannelTypeVolcEngine: true,
 	common.ChannelTypeOllama:     true,

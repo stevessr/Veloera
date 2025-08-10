@@ -87,7 +87,7 @@ func ChannelType2APIType(channelType int) (int, bool) {
 		apiType = APITypeDify
 	case common.ChannelTypeJina:
 		apiType = APITypeJina
-	case common.ChannelCloudflare:
+	case common.ChannelTypeCloudflare:
 		apiType = APITypeCloudflare
 	case common.ChannelTypeSiliconFlow:
 		apiType = APITypeSiliconFlow

@@ -17,6 +17,7 @@
 package cloudflare
 
 var ModelList = []string{
+	// Cloudflare Workers AI models (legacy format)
 	"@cf/meta/llama-3.1-8b-instruct",
 	"@cf/meta/llama-2-7b-chat-fp16",
 	"@cf/meta/llama-2-7b-chat-int8",
@@ -50,6 +51,31 @@ var ModelList = []string{
 	"@hf/nexusflow/starling-lm-7b-beta",
 	"@cf/tinyllama/tinyllama-1.1b-chat-v1.0",
 	"@hf/thebloke/zephyr-7b-beta-awq",
+	
+	// OpenAI models through AI Gateway
+	"openai/gpt-4o",
+	"openai/gpt-4o-mini",
+	"openai/gpt-4",
+	"openai/gpt-4-turbo",
+	"openai/gpt-3.5-turbo",
+	"openai/text-embedding-3-small",
+	"openai/text-embedding-3-large",
+	"openai/text-embedding-ada-002",
+	"openai/whisper-1",
+	"openai/dall-e-3",
+	"openai/dall-e-2",
+	
+	// Anthropic models through AI Gateway  
+	"anthropic/claude-3-5-sonnet-20241022",
+	"anthropic/claude-3-5-haiku-20241022",
+	"anthropic/claude-3-opus-20240229",
+	"anthropic/claude-3-sonnet-20240229",
+	"anthropic/claude-3-haiku-20240307",
+	
+	// Workers AI models with new prefix for gateway routing
+	"workers-ai/llama-3.1-8b-instruct",
+	"workers-ai/llama-2-7b-chat", 
+	"workers-ai/mistral-7b-instruct",
 }
 
 var ChannelName = "cloudflare"
