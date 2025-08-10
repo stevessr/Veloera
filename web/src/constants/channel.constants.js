@@ -56,6 +56,7 @@ export const CHANNEL_OPTIONS = [
     label: 'Cohere',
   },
   { value: 39, color: 'grey', label: 'Cloudflare' },
+  { value: 50, color: 'orange', label: 'Cloudflare AI Gateway' },
   { value: 43, color: 'blue', label: 'DeepSeek' },
   {
     value: 15,

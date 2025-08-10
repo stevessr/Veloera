@@ -25,6 +25,7 @@ import (
 	"veloera/relay/channel/baidu_v2"
 	"veloera/relay/channel/claude"
 	"veloera/relay/channel/cloudflare"
+	"veloera/relay/channel/cloudflare_gateway"
 	"veloera/relay/channel/cohere"
 	"veloera/relay/channel/deepseek"
 	"veloera/relay/channel/dify"
@@ -81,6 +82,8 @@ func GetAdaptor(apiType int) channel.Adaptor {
 		return &jina.Adaptor{}
 	case constant.APITypeCloudflare:
 		return &cloudflare.Adaptor{}
+	case constant.APITypeCloudflareGateway:
+		return &cloudflare_gateway.Adaptor{}
 	case constant.APITypeSiliconFlow:
 		return &siliconflow.Adaptor{}
 	case constant.APITypeVertexAi:

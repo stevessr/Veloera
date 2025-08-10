@@ -1439,6 +1439,45 @@ const EditChannel = (props) => {
               />
             </>
           )}
+          {inputs.type === 50 && (
+            <>
+              <div style={{ marginTop: 10 }}>
+                <Typography.Text strong>Account ID：</Typography.Text>
+              </div>
+              <Input
+                name='api_version'
+                placeholder={
+                  '请输入Account ID，例如：d6b5da8hk1awo8nap34ube6gh'
+                }
+                onChange={(value) => {
+                  handleInputChange('api_version', value);
+                }}
+                value={inputs.api_version}
+                autoComplete='new-password'
+              />
+              <div style={{ marginTop: 10 }}>
+                <Typography.Text strong>Gateway ID：</Typography.Text>
+              </div>
+              <Input
+                name='other'
+                placeholder={
+                  '请输入Gateway ID，例如：my-gateway'
+                }
+                onChange={(value) => {
+                  handleInputChange('other', JSON.stringify({ gateway_id: value }));
+                }}
+                value={(() => {
+                  try {
+                    const parsed = JSON.parse(inputs.other || '{}');
+                    return parsed.gateway_id || '';
+                  } catch {
+                    return inputs.other || '';
+                  }
+                })()}
+                autoComplete='new-password'
+              />
+            </>
+          )}
           <div style={{ marginTop: 10 }}>
             <Typography.Text strong>{t('模型')}：</Typography.Text>
           </div>
